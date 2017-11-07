@@ -97,6 +97,8 @@ class TableViewController: UITableViewController {
 
     // MARK: - Actions
 
+    /// annotate with @objc for use with #selector()
+    /// https://stackoverflow.com/questions/36962854/swift-wants-argument-of-selector-to-be-exposed-to-objective-c#36963058
     @objc func backgroundAdd() {
         // Import many items in a background thread
         DispatchQueue.global().async {
