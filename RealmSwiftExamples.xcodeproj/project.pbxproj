@@ -156,6 +156,7 @@
 				DE5A93F01FB14EA8000B4368 /* Sources */,
 				DE5A93F11FB14EA8000B4368 /* Frameworks */,
 				DE5A93F21FB14EA8000B4368 /* Resources */,
+				DEF0E4A31FB15C8B003DB734 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -274,6 +275,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEF0E4A31FB15C8B003DB734 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/RealmSwiftExamples/RealmFrameworks/Realm.framework",
+				"$(SRCROOT)/RealmSwiftExamples/RealmFrameworks/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE5A93F01FB14EA8000B4368 /* Sources */ = {
