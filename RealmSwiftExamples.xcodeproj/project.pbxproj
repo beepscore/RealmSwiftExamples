@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE5A93F81FB14EA8000B4368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A93F71FB14EA8000B4368 /* AppDelegate.swift */; };
-		DE5A93FA1FB14EA8000B4368 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A93F91FB14EA8000B4368 /* MasterViewController.swift */; };
-		DE5A93FC1FB14EA8000B4368 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A93FB1FB14EA8000B4368 /* DetailViewController.swift */; };
+		DE5A93FA1FB14EA8000B4368 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A93F91FB14EA8000B4368 /* TableViewController.swift */; };
 		DE5A93FF1FB14EA8000B4368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5A93FD1FB14EA8000B4368 /* Main.storyboard */; };
 		DE5A94011FB14EA8000B4368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5A94001FB14EA8000B4368 /* Assets.xcassets */; };
 		DE5A94041FB14EA8000B4368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5A94021FB14EA8000B4368 /* LaunchScreen.storyboard */; };
@@ -39,8 +38,7 @@
 /* Begin PBXFileReference section */
 		DE5A93F41FB14EA8000B4368 /* RealmSwiftExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSwiftExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5A93F71FB14EA8000B4368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE5A93F91FB14EA8000B4368 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		DE5A93FB1FB14EA8000B4368 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DE5A93F91FB14EA8000B4368 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DE5A93FE1FB14EA8000B4368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE5A94001FB14EA8000B4368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE5A94031FB14EA8000B4368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,8 +107,7 @@
 			children = (
 				DEF0E49C1FB15875003DB734 /* RealmFrameworks */,
 				DE5A93F71FB14EA8000B4368 /* AppDelegate.swift */,
-				DE5A93F91FB14EA8000B4368 /* MasterViewController.swift */,
-				DE5A93FB1FB14EA8000B4368 /* DetailViewController.swift */,
+				DE5A93F91FB14EA8000B4368 /* TableViewController.swift */,
 				DE5A93FD1FB14EA8000B4368 /* Main.storyboard */,
 				DE5A94001FB14EA8000B4368 /* Assets.xcassets */,
 				DE5A94021FB14EA8000B4368 /* LaunchScreen.storyboard */,
@@ -299,8 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE5A93FC1FB14EA8000B4368 /* DetailViewController.swift in Sources */,
-				DE5A93FA1FB14EA8000B4368 /* MasterViewController.swift in Sources */,
+				DE5A93FA1FB14EA8000B4368 /* TableViewController.swift in Sources */,
 				DE5A93F81FB14EA8000B4368 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
