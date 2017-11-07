@@ -17,6 +17,7 @@
 		DEF0E49F1FB15875003DB734 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF0E49D1FB15875003DB734 /* RealmSwift.framework */; };
 		DEF0E4A01FB15875003DB734 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF0E49E1FB15875003DB734 /* Realm.framework */; };
 		DEF0E4A51FB16455003DB734 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF0E4A41FB16455003DB734 /* Cell.swift */; };
+		DEF0E4A71FB16D51003DB734 /* DemoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF0E4A61FB16D51003DB734 /* DemoObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		DEF0E49E1FB15875003DB734 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		DEF0E4A11FB15972003DB734 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DEF0E4A41FB16455003DB734 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		DEF0E4A61FB16D51003DB734 /* DemoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				DEF0E49C1FB15875003DB734 /* RealmFrameworks */,
 				DE5A93F71FB14EA8000B4368 /* AppDelegate.swift */,
 				DEF0E4A41FB16455003DB734 /* Cell.swift */,
+				DEF0E4A61FB16D51003DB734 /* DemoObject.swift */,
 				DE5A93F91FB14EA8000B4368 /* TableViewController.swift */,
 				DE5A93FD1FB14EA8000B4368 /* Main.storyboard */,
 				DE5A94001FB14EA8000B4368 /* Assets.xcassets */,
@@ -302,6 +305,7 @@
 				DEF0E4A51FB16455003DB734 /* Cell.swift in Sources */,
 				DE5A93FA1FB14EA8000B4368 /* TableViewController.swift in Sources */,
 				DE5A93F81FB14EA8000B4368 /* AppDelegate.swift in Sources */,
+				DEF0E4A71FB16D51003DB734 /* DemoObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

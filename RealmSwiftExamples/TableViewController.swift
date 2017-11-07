@@ -19,12 +19,6 @@
 import UIKit
 import RealmSwift
 
-class DemoObject: Object {
-    @objc dynamic var title = ""
-    @objc dynamic var date = NSDate()
-}
-
-
 class TableViewController: UITableViewController {
 
     let realm = try! Realm()
