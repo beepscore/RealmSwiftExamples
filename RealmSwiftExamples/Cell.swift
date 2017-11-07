@@ -14,6 +14,10 @@ class Cell: UITableViewCell {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
     }
 
+    // If you override any of a class's designated initializers,
+    // you don't inherit any other designated initializers.
+    // But UIView adopts the NSCoding protocol, which requires an init(coder:) initializer. So you must implement that one too.
+    // https://stackoverflow.com/questions/26081287/required-initializer-initcoder-must-be-provided-by-subclass-of-uitablevi#26081426
     required init(coder: NSCoder) {
         fatalError("NSCoding not supported")
     }
