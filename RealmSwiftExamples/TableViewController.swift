@@ -24,15 +24,6 @@ class DemoObject: Object {
     @objc dynamic var date = NSDate()
 }
 
-class Cell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-    }
-
-    required init(coder: NSCoder) {
-        fatalError("NSCoding not supported")
-    }
-}
 
 class TableViewController: UITableViewController {
 
