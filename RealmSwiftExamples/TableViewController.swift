@@ -31,6 +31,7 @@ class TableViewController: UITableViewController {
         setupUI()
 
         // Set results notification block
+        // block is called every time the realm collection changes
         self.notificationToken = results.observe { (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
