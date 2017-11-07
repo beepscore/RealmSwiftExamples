@@ -53,6 +53,7 @@
 		DE5A941B1FB14EA8000B4368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF0E49D1FB15875003DB734 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		DEF0E49E1FB15875003DB734 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		DEF0E4A11FB15972003DB734 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		DE5A93EB1FB14EA8000B4368 = {
 			isa = PBXGroup;
 			children = (
+				DEF0E4A11FB15972003DB734 /* README.md */,
 				DE5A93F61FB14EA8000B4368 /* RealmSwiftExamples */,
 				DE5A940D1FB14EA8000B4368 /* RealmSwiftExamplesTests */,
 				DE5A94181FB14EA8000B4368 /* RealmSwiftExamplesUITests */,
