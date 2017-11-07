@@ -91,7 +91,12 @@ class TableViewController: UITableViewController {
         if editingStyle == .delete {
             realm.beginWrite()
             realm.delete(results[indexPath.row])
-            try! realm.commitWrite()
+
+            do {
+                try realm.commitWrite()
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
 
@@ -109,13 +114,23 @@ class TableViewController: UITableViewController {
                 // Add row via dictionary. Order is ignored.
                 realm.create(DemoObject.self, value: ["title": ModelHelpers.randomString(), "date": ModelHelpers.randomDate()])
             }
-            try! realm.commitWrite()
+
+            do {
+                try realm.commitWrite()
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
 
     @objc func add() {
         realm.beginWrite()
         realm.create(DemoObject.self, value: [ModelHelpers.randomString(), ModelHelpers.randomDate()])
-        try! realm.commitWrite()
+
+        do {
+            try realm.commitWrite()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
