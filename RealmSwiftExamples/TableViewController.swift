@@ -53,9 +53,10 @@ class TableViewController: UITableViewController {
         }
     }
 
-    // UI
+    // MARK: - UI
 
     func setupUI() {
+        // need this to avoid crash. Why?
         tableView.register(Cell.self, forCellReuseIdentifier: "cell")
 
         self.title = "TableView"
@@ -93,7 +94,7 @@ class TableViewController: UITableViewController {
         }
     }
 
-    // Actions
+    // MARK: - Actions
 
     @objc func backgroundAdd() {
         // Import many items in a background thread
