@@ -104,7 +104,7 @@ class TableViewController: UITableViewController {
             realm.beginWrite()
             for _ in 0..<5 {
                 // Add row via dictionary. Order is ignored.
-                realm.create(DemoObject.self, value: ["title": TableViewController.randomString(), "date": TableViewController.randomDate()])
+                realm.create(DemoObject.self, value: ["title": ModelHelpers.randomString(), "date": ModelHelpers.randomDate()])
             }
             try! realm.commitWrite()
         }
@@ -112,17 +112,7 @@ class TableViewController: UITableViewController {
 
     @objc func add() {
         realm.beginWrite()
-        realm.create(DemoObject.self, value: [TableViewController.randomString(), TableViewController.randomDate()])
+        realm.create(DemoObject.self, value: [ModelHelpers.randomString(), ModelHelpers.randomDate()])
         try! realm.commitWrite()
-    }
-
-    // Helpers
-
-    class func randomString() -> String {
-        return "Title \(arc4random())"
-    }
-
-    class func randomDate() -> NSDate {
-        return NSDate(timeIntervalSince1970: TimeInterval(arc4random()))
     }
 }
