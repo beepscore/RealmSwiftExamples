@@ -21,7 +21,9 @@ import RealmSwift
 
 class TableViewController: UITableViewController {
 
+    // get the default Realm
     let realm = try! Realm()
+
     let results = try! Realm().objects(DemoObject.self).sorted(byKeyPath: "date")
     var notificationToken: NotificationToken?
 
