@@ -59,6 +59,12 @@ class TableViewController: UITableViewController {
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // stop notifications. stop was renamed to invalidate
+        notificationToken?.invalidate()
+    }
+
     // MARK: - UI
 
     func setupUI() {
