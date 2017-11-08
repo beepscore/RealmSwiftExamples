@@ -7,8 +7,6 @@
 //
 
 import XCTest
-// import for type Results<>
-import RealmSwift
 @testable import RealmSwiftExamples
 
 class RealmServiceTests: XCTestCase {
@@ -20,7 +18,7 @@ class RealmServiceTests: XCTestCase {
     func testReadAddUpdateDelete() {
 
         let realmService = RealmService.shared
-        let demoObjects: Results<DemoObject> = realmService.realm.objects(DemoObject.self).sorted(byKeyPath: "date")
+        let demoObjects = realmService.realm.objects(DemoObject.self).sorted(byKeyPath: "date")
         let initialCount = demoObjects.count
 
         let demoObject = DemoObject(title: ModelHelpers.randomString(),
