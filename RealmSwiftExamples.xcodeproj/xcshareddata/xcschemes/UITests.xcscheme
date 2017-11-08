@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE5A94091FB14EA8000B4368"
-               BuildableName = "RealmSwiftExamplesTests.xctest"
-               BlueprintName = "RealmSwiftExamplesTests"
+               BlueprintIdentifier = "DE5A94141FB14EA8000B4368"
+               BuildableName = "RealmSwiftExamplesUITests.xctest"
+               BlueprintName = "RealmSwiftExamplesUITests"
                ReferencedContainer = "container:RealmSwiftExamples.xcodeproj">
             </BuildableReference>
          </TestableReference>
