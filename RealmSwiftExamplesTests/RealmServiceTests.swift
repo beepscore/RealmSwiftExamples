@@ -17,7 +17,7 @@ class RealmServiceTests: XCTestCase {
         XCTAssertNotNil(RealmService.shared)
     }
 
-    func testReadAddDelete() {
+    func testReadAddUpdateDelete() {
 
         let realmService = RealmService.shared
         let demoObjects: Results<DemoObject> = realmService.realm.objects(DemoObject.self).sorted(byKeyPath: "date")
@@ -27,9 +27,14 @@ class RealmServiceTests: XCTestCase {
                                     date: ModelHelpers.randomDate(),
                                     email: "foo",
                                     score: 2)
+        XCTAssertEqual(demoObject.email, "foo")
 
         realmService.add(demoObject)
         XCTAssertEqual(demoObjects.count, initialCount + 1)
+
+        realmService.update(demoObject, with: ["email" : "bar"])
+        XCTAssertEqual(demoObject.email, "bar")
+
         realmService.delete(demoObject)
         XCTAssertEqual(demoObjects.count, initialCount)
     }
