@@ -12,7 +12,6 @@
 		DE5A93FF1FB14EA8000B4368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5A93FD1FB14EA8000B4368 /* Main.storyboard */; };
 		DE5A94011FB14EA8000B4368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE5A94001FB14EA8000B4368 /* Assets.xcassets */; };
 		DE5A94041FB14EA8000B4368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5A94021FB14EA8000B4368 /* LaunchScreen.storyboard */; };
-		DE5A940F1FB14EA8000B4368 /* RealmSwiftExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A940E1FB14EA8000B4368 /* RealmSwiftExamplesTests.swift */; };
 		DE5A941A1FB14EA8000B4368 /* RealmSwiftExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A94191FB14EA8000B4368 /* RealmSwiftExamplesUITests.swift */; };
 		DE9F05A61FB36E5D00DDCF93 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F05A51FB36E5D00DDCF93 /* RealmServiceTests.swift */; };
 		DECB86EC1FB17A55007C46AF /* ModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB86EB1FB17A55007C46AF /* ModelHelpers.swift */; };
@@ -48,7 +47,6 @@
 		DE5A94031FB14EA8000B4368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE5A94051FB14EA8000B4368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5A940A1FB14EA8000B4368 /* RealmSwiftExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSwiftExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE5A940E1FB14EA8000B4368 /* RealmSwiftExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftExamplesTests.swift; sourceTree = "<group>"; };
 		DE5A94101FB14EA8000B4368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5A94151FB14EA8000B4368 /* RealmSwiftExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSwiftExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5A94191FB14EA8000B4368 /* RealmSwiftExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftExamplesUITests.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 		DE5A940D1FB14EA8000B4368 /* RealmSwiftExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
-				DE5A940E1FB14EA8000B4368 /* RealmSwiftExamplesTests.swift */,
 				DE9F05A51FB36E5D00DDCF93 /* RealmServiceTests.swift */,
 				DE5A94101FB14EA8000B4368 /* Info.plist */,
 			);
@@ -320,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE5A940F1FB14EA8000B4368 /* RealmSwiftExamplesTests.swift in Sources */,
 				DE9F05A61FB36E5D00DDCF93 /* RealmServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
