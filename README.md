@@ -13,6 +13,10 @@ https://github.com/realm/realm-cocoa
 
 # Results
 
+## RealmService
+Add a class similar to Realm: CRUD | Swift 4, Xcode 9
+https://www.youtube.com/watch?v=hC6dLLbfUXc
+
 # Appendix Build realm frameworks
 Built for Swift 4.0.2
 I did this in another directory.
