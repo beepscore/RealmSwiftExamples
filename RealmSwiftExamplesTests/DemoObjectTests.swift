@@ -15,17 +15,15 @@ class DemoObjectTests: XCTestCase {
     func testConvenienceInit() {
 
         let title = "foo"
+
+        // Date now
+        let date = Date()
+
         let email = "bar@gmail.com"
         let score = 2
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT+0:00") as TimeZone!
-        let dateString = "2017-11-07"
-        let date = dateFormatter.date(from: dateString)
-
         let demoObject = DemoObject(title: title,
-                                    date: date!,
+                                    date: date,
                                     email: email,
                                     score: score)
 
