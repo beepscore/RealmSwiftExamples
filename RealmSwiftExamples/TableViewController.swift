@@ -98,14 +98,7 @@ class TableViewController: UITableViewController {
         guard let object = results?[indexPath.row] else { return }
 
         if editingStyle == .delete {
-            realmService.realm.beginWrite()
-            realmService.realm.delete(object)
-
-            do {
-                try realmService.realm.commitWrite()
-            } catch let error {
-                print(error.localizedDescription)
-            }
+            realmService.delete(object)
         }
     }
 
