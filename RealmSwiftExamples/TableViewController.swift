@@ -57,12 +57,24 @@ class TableViewController: UITableViewController {
                 break
             }
         }
+
+        realmService.addObserverRealmError(in: self, completion: { (error) in
+            // handle optional error
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("RealmError is nil")
+            }
+        })
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        // stop notifications. stop was renamed to invalidate
+        // stop update notifications. stop was renamed to invalidate
         notificationToken?.invalidate()
+
+        // stop error notifications
+        realmService.removeObserverRealmError(in: self)
     }
 
     // MARK: - UI
