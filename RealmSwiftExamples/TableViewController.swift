@@ -140,17 +140,10 @@ class TableViewController: UITableViewController {
     }
 
     @objc func add() {
-        realmService.realm.beginWrite()
-        //realm.create(DemoObject.self, value: [ModelHelpers.randomString(), ModelHelpers.randomDate()])
         let demoObject = DemoObject(title: ModelHelpers.randomString(),
                                     date: ModelHelpers.randomDate(),
                                     email: "foo",
                                     score: 2)
-        realmService.realm.add(demoObject)
-        do {
-            try realmService.realm.commitWrite()
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        realmService.add(demoObject)
     }
 }
