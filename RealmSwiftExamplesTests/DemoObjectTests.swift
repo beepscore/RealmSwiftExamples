@@ -31,7 +31,27 @@ class DemoObjectTests: XCTestCase {
         XCTAssertEqual(demoObject.date, date)
         XCTAssertEqual(demoObject.email, email)
         XCTAssertEqual(demoObject.score.value, score)
+    }
 
+    func testConvenienceInitEmailNilScoreNil() {
+
+        let title = "foo"
+
+        // Date now
+        let date = Date()
+
+        let email: String? = nil
+        let score: Int? = nil
+
+        let demoObject = DemoObject(title: title,
+                                    date: date,
+                                    email: email,
+                                    score: score)
+
+        XCTAssertEqual(demoObject.title, title)
+        XCTAssertEqual(demoObject.date, date)
+        XCTAssertEqual(demoObject.email, email)
+        XCTAssertEqual(demoObject.score.value, score)
     }
     
 }
