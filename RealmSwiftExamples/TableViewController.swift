@@ -21,10 +21,9 @@ import RealmSwift
 
 class TableViewController: UITableViewController {
 
-    // get the default Realm
-    let realm = try! Realm()
-
-    let results = try! Realm().objects(DemoObject.self).sorted(byKeyPath: "date")
+    let realmService = RealmService.shared
+    
+    var results: Results<DemoObject>?
     var notificationToken: NotificationToken?
 
     override func viewDidLoad() {
@@ -32,9 +31,11 @@ class TableViewController: UITableViewController {
 
         setupUI()
 
+        results = realmService.realm.objects(DemoObject.self).sorted(byKeyPath: "date")
+
         // Set results notification block
         // block is called every time the realm collection changes
-        self.notificationToken = results.observe { (changes: RealmCollectionChange) in
+        self.notificationToken = results?.observe { (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
                 // Results are now populated and can be accessed without blocking the UI
@@ -76,26 +77,32 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results.count
+        if results == nil || results?.count == nil {
+            return 0
+        } else {
+            return results!.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Cell
 
-        let object = results[indexPath.row]
+        guard let object = results?[indexPath.row] else { return cell }
         cell.textLabel?.text = object.title
         cell.detailTextLabel?.text = object.date.description
-
         return cell
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+        guard let object = results?[indexPath.row] else { return }
+
         if editingStyle == .delete {
-            realm.beginWrite()
-            realm.delete(results[indexPath.row])
+            realmService.realm.beginWrite()
+            realmService.realm.delete(object)
 
             do {
-                try realm.commitWrite()
+                try realmService.realm.commitWrite()
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -114,7 +121,14 @@ class TableViewController: UITableViewController {
             realm.beginWrite()
             for _ in 0..<5 {
                 // Add row via dictionary. Order is ignored.
-                realm.create(DemoObject.self, value: ["title": ModelHelpers.randomString(), "date": ModelHelpers.randomDate()])
+                // realm.create(DemoObject.self, value: ["title": ModelHelpers.randomString(),
+                // "date": ModelHelpers.randomDate()])
+
+                let demoObject = DemoObject(title: ModelHelpers.randomString(),
+                                            date: ModelHelpers.randomDate(),
+                                            email: "foo",
+                                            score: 2)
+                realm.add(demoObject)
             }
 
             do {
@@ -126,11 +140,15 @@ class TableViewController: UITableViewController {
     }
 
     @objc func add() {
-        realm.beginWrite()
-        realm.create(DemoObject.self, value: [ModelHelpers.randomString(), ModelHelpers.randomDate()])
-
+        realmService.realm.beginWrite()
+        //realm.create(DemoObject.self, value: [ModelHelpers.randomString(), ModelHelpers.randomDate()])
+        let demoObject = DemoObject(title: ModelHelpers.randomString(),
+                                    date: ModelHelpers.randomDate(),
+                                    email: "foo",
+                                    score: 2)
+        realmService.realm.add(demoObject)
         do {
-            try realm.commitWrite()
+            try realmService.realm.commitWrite()
         } catch let error {
             print(error.localizedDescription)
         }
