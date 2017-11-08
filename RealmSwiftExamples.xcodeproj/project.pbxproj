@@ -17,6 +17,7 @@
 		DE9F05A81FB36FAA00DDCF93 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F05A71FB36FAA00DDCF93 /* RealmService.swift */; };
 		DEB4632F1FB389D9000D8583 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF0E49E1FB15875003DB734 /* Realm.framework */; };
 		DEB463301FB389DD000D8583 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF0E49D1FB15875003DB734 /* RealmSwift.framework */; };
+		DEBB812C1FB3A95A0012BD4B /* DemoObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB812B1FB3A95A0012BD4B /* DemoObjectTests.swift */; };
 		DECB86EC1FB17A55007C46AF /* ModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB86EB1FB17A55007C46AF /* ModelHelpers.swift */; };
 		DEF0E49F1FB15875003DB734 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF0E49D1FB15875003DB734 /* RealmSwift.framework */; };
 		DEF0E4A01FB15875003DB734 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF0E49E1FB15875003DB734 /* Realm.framework */; };
@@ -56,6 +57,7 @@
 		DE5A941B1FB14EA8000B4368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE9F05A51FB36E5D00DDCF93 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
 		DE9F05A71FB36FAA00DDCF93 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		DEBB812B1FB3A95A0012BD4B /* DemoObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoObjectTests.swift; sourceTree = "<group>"; };
 		DECB86EB1FB17A55007C46AF /* ModelHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHelpers.swift; sourceTree = "<group>"; };
 		DEF0E49D1FB15875003DB734 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		DEF0E49E1FB15875003DB734 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		DE5A940D1FB14EA8000B4368 /* RealmSwiftExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				DEBB812B1FB3A95A0012BD4B /* DemoObjectTests.swift */,
 				DE9F05A51FB36E5D00DDCF93 /* RealmServiceTests.swift */,
 				DE5A94101FB14EA8000B4368 /* Info.plist */,
 			);
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9F05A61FB36E5D00DDCF93 /* RealmServiceTests.swift in Sources */,
+				DEBB812C1FB3A95A0012BD4B /* DemoObjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

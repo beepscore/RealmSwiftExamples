@@ -14,7 +14,7 @@ class DemoObject: Object {
 
     // objects must be available at runtime, so generally set default value
     @objc dynamic var title: String = ""
-    @objc dynamic var date: NSDate = NSDate()
+    @objc dynamic var date: Date = Date()
 
     // example optional String
     @objc dynamic var email: String? = nil
@@ -23,7 +23,7 @@ class DemoObject: Object {
     let score = RealmOptional<Int>()
 
     // convenience initializer
-    convenience init(title: String, date: NSDate, email: String?, score: Int?) {
+    convenience init(title: String, date: Date, email: String?, score: Int?) {
         // must call designated initializer
         self.init()
 

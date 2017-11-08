@@ -14,7 +14,7 @@ class ModelHelpers {
         return "Title \(arc4random())"
     }
 
-    class func randomDate() -> NSDate {
-        return NSDate(timeIntervalSince1970: TimeInterval(arc4random()))
+    class func randomDate() -> Date {
+        return Date(timeIntervalSince1970: TimeInterval(arc4random()))
     }
 }
