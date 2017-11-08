@@ -35,6 +35,8 @@ class TableViewController: UITableViewController {
 
         // Set results notification block
         // block is called every time the realm collection changes
+        // realm.io sample code uses "observe"
+        // video tutorial used method "addNotificationBlock", comments say it was renamed to "observe"
         self.notificationToken = results?.observe { (changes: RealmCollectionChange) in
             switch changes {
             case .initial:
