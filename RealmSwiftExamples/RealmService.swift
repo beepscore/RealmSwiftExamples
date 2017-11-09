@@ -72,8 +72,12 @@ class RealmService {
 
     /// post error to notification center
     func post(_ error: Error) {
-        // post or addObserver should specify main queue to avoid potential crash in observers like view controllers
-        NotificationCenter.default.post(name: realmErrorNotificationName, object: error)
+        // post on main queue to avoid potential crash in observers like view controllers.
+        // Can specify queue in addObserver or in post, either one should suffice.
+        // Do it both places for "belt and suspenders" goof proofing.
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: realmErrorNotificationName, object: error)
+        }
     }
 
     // TODO: check this tutorial code. addObserverRealmError seems to not use vc.
