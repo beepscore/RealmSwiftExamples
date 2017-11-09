@@ -72,6 +72,7 @@ class RealmService {
 
     /// post error to notification center
     func post(_ error: Error) {
+        // post or addObserver should specify mainQueue to avoid potential crash in observers like view controllers
         NotificationCenter.default.post(name: realmErrorNotificationName, object: error)
     }
 
@@ -90,11 +91,14 @@ class RealmService {
         // last argument "using:" is a completion block containing the notification
         // returns an "opaque object" to act as the observer
 
-        // tutorial code is not keeping a reference to returned value for use in remove observer
+        // tutorial code is not keeping a reference to returned value for use in remove observer.
+        // Specify main queue to ensure completion is not run in a background queue.
+        // This avoids potential crash in observers like view controllers.
+        // https://stackoverflow.com/questions/15813764/posting-nsnotification-on-the-main-thread/42800900#42800900
         let _ = NotificationCenter.default.addObserver(forName: realmErrorNotificationName,
-                                               object: nil,
-                                               queue: nil) { (notification) in
-                                                completion(notification.object as? Error)
+                                                       object: nil,
+                                                       queue: OperationQueue.main) { (notification) in
+                                                        completion(notification.object as? Error)
         }
     }
 
