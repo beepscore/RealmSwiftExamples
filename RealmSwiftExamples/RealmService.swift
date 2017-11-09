@@ -21,7 +21,7 @@ class RealmService {
     // default realm is a file in app documents directory
     var realm = try! Realm()
 
-    let realmErrorNotificationName = NSNotification.Name("RealmError")
+    static let realmErrorNotificationName = NSNotification.Name("RealmError")
 
     /// generic function to add an object to a realm
     /// - Parameter object: a generic type that subclasses Realm class Object
@@ -76,7 +76,8 @@ class RealmService {
         // Can specify queue in addObserver or in post, either one should suffice.
         // Do it both places for "belt and suspenders" goof proofing.
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: realmErrorNotificationName, object: error)
+            NotificationCenter.default.post(name: RealmService.realmErrorNotificationName,
+                                            object: error)
         }
     }
 
@@ -99,7 +100,7 @@ class RealmService {
         // Specify main queue to ensure completion is not run in a background queue.
         // This avoids potential crash in observers like view controllers.
         // https://stackoverflow.com/questions/15813764/posting-nsnotification-on-the-main-thread/42800900#42800900
-        let _ = NotificationCenter.default.addObserver(forName: realmErrorNotificationName,
+        let _ = NotificationCenter.default.addObserver(forName: RealmService.realmErrorNotificationName,
                                                        object: nil,
                                                        queue: OperationQueue.main) { (notification) in
                                                         completion(notification.object as? Error)
@@ -109,7 +110,9 @@ class RealmService {
     func removeObserverRealmError(in vc: UIViewController) {
         // last argument is a completion block
         // tutorial doesn't specify an observer, so all observers will be removed?
-        NotificationCenter.default.removeObserver(vc, name: realmErrorNotificationName, object: nil)
+        NotificationCenter.default.removeObserver(vc,
+                                                  name: RealmService.realmErrorNotificationName,
+                                                  object: nil)
     }
 
 }
