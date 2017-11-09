@@ -72,7 +72,7 @@ class RealmService {
 
     /// post error to notification center
     func post(_ error: Error) {
-        // post or addObserver should specify mainQueue to avoid potential crash in observers like view controllers
+        // post or addObserver should specify main queue to avoid potential crash in observers like view controllers
         NotificationCenter.default.post(name: realmErrorNotificationName, object: error)
     }
 
