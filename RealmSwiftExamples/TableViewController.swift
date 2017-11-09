@@ -129,8 +129,15 @@ class TableViewController: UITableViewController {
     @objc func backgroundAdd() {
         // Import many items in a background thread
         DispatchQueue.global().async {
-            // Get new realm and table since we are in a new thread
+            // Get new realm and table since we are in a new thread.
+
+            // Realm instances are not thread safe and cannot be shared across threads or dispatch queues.
+            // You must construct a new instance for each thread in which a Realm will be accessed.
+            // For dispatch queues, this means that you must construct a new instance
+            // in each block which is dispatched, as a queue is not guaranteed to run all of its blocks on the same thread.
+            // https://realm.io/docs/swift/latest/api/Classes/Realm.html#/s:FC10RealmSwift5Realm3addFTCS_6Object6updateSb_T_
             let realm = try! Realm()
+            
             realm.beginWrite()
             for _ in 0..<5 {
                 // Add row via dictionary. Order is ignored.
